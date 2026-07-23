@@ -1,8 +1,10 @@
 #!/bin/bash
 
+# TODO Parameterize this
 export STAGE=/root/l4t-usbip/38.2.2/root
 
 # build usbip modules
+# TODO Parameterize this and perhaps add tool for cloning right l4t kernel tree
 cd /root/l4t/Linux_for_Tegra/source/kernel/kernel-noble
 
 # start with live kernel config

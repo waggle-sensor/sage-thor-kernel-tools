@@ -51,7 +51,7 @@ Architecture: arm64
 Maintainer: Sage <support@sagecontinuum.org>
 Section: kernel
 Priority: optional
-Depends: libc6, libudev1, nvidia-l4t-kernel (= 6.8.12-tegra-38.2.2-20250925153837)
+Depends: libc6, libudev1, hwdata, nvidia-l4t-kernel (= 6.8.12-tegra-38.2.2-20250925153837)
 Homepage: https://github.com/torvalds/linux/tree/master/tools/usb/usbip
 Description: USB/IP tools and kernel modules for Jetson Linux 38.2.2
  Userspace usbip and usbipd plus libusbip, installed under /usr/local,

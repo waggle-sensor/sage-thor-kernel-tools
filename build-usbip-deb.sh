@@ -42,6 +42,11 @@ BUILD="$(mktemp -d)"; ROOT="$BUILD/${PKG}_${VER}_${ARCH}"
 # build deb
 cd "${STAGE}"
 
+mkdir -p etc/modules-load.d
+cat > etc/modules-load.d/usbip-tegra.conf <<'EOF'
+vhci-hcd
+EOF
+
 mkdir -p DEBIAN
 
 cat > "DEBIAN/control" <<'EOF'

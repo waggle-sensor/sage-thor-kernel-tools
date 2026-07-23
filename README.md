@@ -11,3 +11,5 @@ Since all of the modules are _kernel version specific_, I have currently pinned 
 BSP packages version: 38.2.2-20250925153837
 Kernel packages version: 6.8.12-tegra-38.2.2-20250925153837
 ```
+
+Right now, it's only building the usbip modules and tools but the plan is to build a workflow where we clone the kernel source and build the modules _once_ and then package specific self-contained subsets of those modules into their own .deb packages. (Ex. wireguard-tegra, usbip-tegra, etc)

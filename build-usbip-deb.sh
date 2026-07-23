@@ -35,7 +35,8 @@ STAGE="${1:?stage root, e.g. /root/l4t-usbip/38.2.2/root}"
 VER="${2:?version}"
 KVER="${3:?kernel version, e.g. 6.8.12-tegra}"
 PRUNE="${4:-}"
-PKG="usbip-tegra"; ARCH="arm64"
+PKG="usbip-tegra"
+ARCH="arm64"
 BUILD="$(mktemp -d)"; ROOT="$BUILD/${PKG}_${VER}_${ARCH}"
 
 # build deb
@@ -117,5 +118,3 @@ EOF
 chmod 775 DEBIAN/postinst DEBIAN/prerm DEBIAN/postrm
 
 dpkg-deb --root-owner-group --build "${STAGE}" "../usbip-tegra_38.2.2-20250925153837-1_arm64.deb"
-
-# need to add postinst dep... -a / ldconfig
